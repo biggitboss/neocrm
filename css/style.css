@@ -57,10 +57,17 @@ table.table-crm tbody tr:hover{background:var(--surface);}
 .stage-tabs{border-bottom:1px solid var(--border);}
 .stage-tabs .nav-link{color:#555;font-size:.82rem;border:none;border-bottom:2px solid transparent;border-radius:0;padding:.55rem 1rem;}
 .stage-tabs .nav-link.active{color:#000;font-weight:600;border-bottom-color:#000;background:none;}
+.nav-tabs .nav-link{color:#555;}
+.nav-tabs .nav-link.active{color:#000;font-weight:600;}
 
-.field-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);margin-bottom:.15rem;}
-.field-value{font-size:.9rem;border-bottom:1px solid var(--border);padding-bottom:.35rem;min-height:1.6rem;}
+.data-block{background:#f7f7f7;border-radius:6px;padding:1rem .75rem 1.25rem;margin-bottom:1.2rem;}
+.field-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);margin-bottom:.25rem;}
+.field-input{border:1px solid var(--border);border-radius:4px;font-size:.9rem;padding:.45rem .65rem;}
+.field-input:focus{border-color:#000;box-shadow:none;}
 .section-title{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#000;margin:1.4rem 0 .8rem;border-bottom:1px solid #000;padding-bottom:.25rem;}
+
+/* ---------- Stage ribbon ---------- */
+.stage-ribbon{position:absolute;top:35px;right:-36px;background:#1a6d1a;color:#fff;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:.2rem 2.5rem;transform:rotate(45deg);z-index:5;white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.12);}
 
 /* ---------- Chatter (sidebar) ---------- */
 .chatter{border-left:1px solid var(--border);}

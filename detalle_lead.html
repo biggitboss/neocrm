@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>ED: Sharmely Dayana - CRM</title>
+<title>Camila Ramirez - CRM</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -15,29 +15,14 @@
 <nav class="navbar-crm d-flex align-items-center justify-content-between">
   <div class="d-flex align-items-center">
     <span class="brand me-4"><i class="bi bi-grid-3x3-gap-fill"></i> CRM</span>
-    <a class="nav-link d-inline-block" href="flujo.html">Oportunidades</a>
+    <a class="nav-link d-inline-block" href="flujo.html">Mi Flujo</a>
     <a class="nav-link d-inline-block active" href="leads.html">Leads</a>
-    <a class="nav-link d-inline-block" href="#">Leads Posgrado</a>
     <a class="nav-link d-inline-block" href="#">Reportes</a>
     <a class="nav-link d-inline-block" href="#">Configuración</a>
   </div>
   <div class="avatar-circle">A</div>
 </nav>
 
-<!-- TOOLBAR -->
-<div class="toolbar justify-content-between">
-  <div class="d-flex align-items-center gap-2">
-    <button class="btn-crm">Nuevo</button>
-    <span class="breadcrumb-crm">
-      <a href="leads.html">Leads</a> / <span class="current">ED: Sharmely Dayana</span>
-    </span>
-  </div>
-  <div class="d-flex align-items-center gap-2">
-    <button class="btn-crm"><i class="bi bi-calendar3 me-1"></i> Sin reuniones</button>
-    <button class="btn-crm"><i class="bi bi-star me-1"></i> Lead similar <span class="text-muted">1</span></button>
-    <span class="pager">1 / 1 <i class="bi bi-chevron-left"></i> <i class="bi bi-chevron-right"></i></span>
-  </div>
-</div>
 
 <div class="row g-0">
   <!-- MAIN -->
@@ -45,12 +30,12 @@
 
     <!-- status bar -->
     <div class="toolbar">
-      <button class="status-btn solid">Ganado</button>
+      <button class="status-btn solid" onclick="window.location.href='detalle_flujo.html'">Ganado</button>
       <button class="status-btn">Perdido</button>
     </div>
 
     <div class="p-4">
-      <h2 class="fw-bold mb-4">ED: Sharmely Dayana</h2>
+      <h2 class="fw-bold mb-4">Camila Ramirez</h2>
 
       <div class="row mb-4">
         <div class="col-6">
@@ -63,68 +48,74 @@
         </div>
       </div>
 
-      <div class="section-title">Datos del interesado</div>
+      <div class="data-block">
+      <div class="section-title" style="margin-top:0;">Bloque examen</div>
       <div class="row gy-3">
         <div class="col-md-6">
-          <div class="field-label">DNI</div>
-          <div class="field-value">61723874</div>
+          <label class="field-label" for="lead-1">label_1</label>
+          <input class="field-input form-control" id="lead-1" type="text" placeholder="Campo_1">
         </div>
         <div class="col-md-6">
-          <div class="field-label">Nombre Completo</div>
-          <div class="field-value">ED: Sharmely Dayana</div>
+          <label class="field-label" for="lead-2">label_2</label>
+          <input class="field-input form-control" id="lead-2" type="text" value="Campo_2">
         </div>
         <div class="col-md-6">
-          <div class="field-label">Colegio 5to Sec:</div>
-          <div class="field-value">&nbsp;</div>
+          <label class="field-label" for="lead-3">label_3</label>
+          <input class="field-input form-control" id="lead-3" type="text" placeholder="Campo_3">
         </div>
         <div class="col-md-6">
-          <div class="field-label">Grado Escolar:</div>
-          <div class="field-value">5to_de_secundaria</div>
+          <label class="field-label" for="lead-4">label_4</label>
+          <input class="field-input form-control" id="lead-4" type="text" value="Campo_4">
         </div>
       </div>
-
-      <div class="section-title">Datos de admisión</div>
-      <div class="row gy-3">
-        <div class="col-md-6">
-          <div class="field-label">Carrera de Interés:</div>
-          <div class="field-value">&nbsp;</div>
-        </div>
-        <div class="col-md-6">
-          <div class="field-label">Semestre (Admisión):</div>
-          <div class="field-value">&nbsp;</div>
-        </div>
-        <div class="col-md-6">
-          <div class="field-label">Modalidad:</div>
-          <div class="field-value">&nbsp;</div>
-        </div>
-        <div class="col-md-6">
-          <div class="field-label">Semestre (Campaña): <i class="bi bi-question-circle text-muted"></i></div>
-          <div class="field-value">2026-II</div>
-        </div>
-        <div class="col-md-6">
-          <div class="field-label">Sede:</div>
-          <div class="field-value d-flex justify-content-between">&nbsp;<i class="bi bi-caret-down-fill text-muted"></i></div>
-        </div>
       </div>
 
-      <div class="section-title">Datos del lead</div>
+      <div class="data-block">
+      <div class="section-title" style="margin-top:0;">Datos de admisión</div>
       <div class="row gy-3">
         <div class="col-md-6">
-          <div class="field-label">Origen del Lead:</div>
-          <div class="field-value">Pauta Digital</div>
+          <label class="field-label" for="adm-carrera">Carrera de Interés:</label>
+          <input class="field-input form-control" id="adm-carrera" type="text" placeholder="Seleccionar carrera">
         </div>
         <div class="col-md-6">
-          <div class="field-label">Campaña de Pauta Digital:</div>
-          <div class="field-value">EXAMEN DIGITAL</div>
+          <label class="field-label" for="adm-semestre">Semestre (Admisión):</label>
+          <input class="field-input form-control" id="adm-semestre" type="text" placeholder="2026-I">
         </div>
         <div class="col-md-6">
-          <div class="field-label">Equipo de ventas</div>
-          <div class="field-value">Comercial Pregrado</div>
+          <label class="field-label" for="adm-modalidad">Modalidad:</label>
+          <input class="field-input form-control" id="adm-modalidad" type="text" placeholder="Presencial / Virtual">
         </div>
         <div class="col-md-6">
-          <div class="field-label">Responsable</div>
-          <div class="field-value">Pya Fanny Pinto Quiroz</div>
+          <label class="field-label" for="adm-campania">Semestre (Campaña): <i class="bi bi-question-circle text-muted"></i></label>
+          <input class="field-input form-control" id="adm-campania" type="text" value="2026-II">
         </div>
+        <div class="col-md-6">
+          <label class="field-label" for="adm-sede">Sede:</label>
+          <input class="field-input form-control" id="adm-sede" type="text" placeholder="Seleccionar sede">
+        </div>
+      </div>
+      </div>
+
+      <div class="data-block">
+      <div class="section-title" style="margin-top:0;">Datos del lead</div>
+      <div class="row gy-3">
+        <div class="col-md-6">
+          <label class="field-label" for="lead-origen">Origen del Lead:</label>
+          <input class="field-input form-control" id="lead-origen" type="text" value="Pauta Digital">
+        </div>
+        <div class="col-md-6">
+          <label class="field-label" for="lead-campania">Campaña de Pauta Digital:</label>
+          <input class="field-input form-control" id="lead-campania" type="text" value="EXAMEN DIGITAL">
+        </div>
+        <div class="col-md-6">
+          <label class="field-label" for="lead-equipo">Equipo de ventas</label>
+          <input class="field-input form-control" id="lead-equipo" type="text" value="Comercial Pregrado">
+        </div>
+        <div class="col-md-6">
+          <label class="field-label" for="lead-responsable">Responsable</label>
+          <input class="field-input form-control" id="lead-responsable" type="text" value="Pya Fanny Pinto Quiroz">
+        </div>
+      </div>
       </div>
 
       <ul class="nav nav-tabs mt-4" style="font-size:.85rem;">
@@ -161,7 +152,7 @@
         <div class="avatar-circle" style="width:28px;height:28px;font-size:.7rem;">L</div>
         <div>
           <div><strong>Lider Comercial</strong> <span class="text-muted">10:16 a. m.</span></div>
-          <div class="text-muted">Ninguno → <a href="#">ED: Sharmely Dayana</a> <em>(Contacto)</em></div>
+          <div class="text-muted">Ninguno → <a href="#">Camila Ramirez</a> <em>(Contacto)</em></div>
           <div class="text-muted">Lead → <a href="#">Oportunidad</a> <em>(Tipo)</em></div>
         </div>
       </div>

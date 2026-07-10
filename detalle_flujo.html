@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Sara Mendoza - CRM</title>
+<title>Camila Ramirez - CRM</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -15,29 +15,14 @@
 <nav class="navbar-crm d-flex align-items-center justify-content-between">
   <div class="d-flex align-items-center">
     <span class="brand me-4"><i class="bi bi-grid-3x3-gap-fill"></i> CRM</span>
-    <a class="nav-link d-inline-block active" href="flujo.html">Oportunidades</a>
+    <a class="nav-link d-inline-block active" href="flujo.html">Mi Flujo</a>
     <a class="nav-link d-inline-block" href="leads.html">Leads</a>
-    <a class="nav-link d-inline-block" href="#">Leads Posgrado</a>
     <a class="nav-link d-inline-block" href="#">Reportes</a>
     <a class="nav-link d-inline-block" href="#">Configuración</a>
   </div>
   <div class="avatar-circle">A</div>
 </nav>
 
-<!-- TOOLBAR -->
-<div class="toolbar justify-content-between">
-  <div class="d-flex align-items-center gap-2">
-    <button class="btn-crm">Nuevo</button>
-    <span class="breadcrumb-crm">
-      <a href="flujo.html">Flujo</a> / <span class="current">Sara Mendoza</span>
-    </span>
-  </div>
-  <div class="d-flex align-items-center gap-2">
-    <button class="btn-crm"><i class="bi bi-calendar3 me-1"></i> Sin reuniones</button>
-    <button class="btn-crm"><i class="bi bi-star me-1"></i> Lead similar <span class="text-muted">0</span></button>
-    <span class="pager">1 / 6 <i class="bi bi-chevron-left"></i> <i class="bi bi-chevron-right"></i></span>
-  </div>
-</div>
 
 <div class="row g-0">
   <!-- MAIN -->
@@ -45,20 +30,21 @@
 
     <!-- status bar -->
     <div class="toolbar">
-      <button class="status-btn">Ganado</button>
+      <button class="status-btn" onclick="window.location.href='detalle_flujo.html'">Ganado</button>
       <button class="status-btn">Perdido</button>
-      <ul class="nav stage-tabs ms-3 flex-grow-1">
-        <li class="nav-item"><a class="nav-link active" href="#">Exámen</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Pago</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Status Académico</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Status Exámen</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Documentos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Matriculado</a></li>
+      <ul class="nav stage-tabs ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#" data-stage="examen">Exámen</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-stage="pago">Pago</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-stage="status-academico">Status Académico</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-stage="status-examen">Status Exámen</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-stage="documentos">Documentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-stage="matriculado">Matriculado</a></li>
       </ul>
     </div>
 
-    <div class="p-4">
-      <h2 class="fw-bold mb-4">Sara Mendoza</h2>
+    <div class="p-4 position-relative overflow-hidden">
+      <div class="stage-ribbon d-none" id="ribbon-matriculado">Matriculado</div>
+      <h2 class="fw-bold mb-4">Camila Ramirez</h2>
 
       <div class="row mb-4">
         <div class="col-6">
@@ -71,67 +57,130 @@
         </div>
       </div>
 
-      <div class="section-title">Datos del interesado</div>
-      <div class="row gy-3">
-        <div class="col-md-6">
-          <div class="field-label">DNI</div>
-          <div class="field-value">&nbsp;</div>
-        </div>
-        <div class="col-md-6">
-          <div class="field-label">Nombre Completo</div>
-          <div class="field-value">Sara Mendoza</div>
-        </div>
-        <div class="col-md-6">
-          <div class="field-label">Colegio 5to Sec:</div>
-          <div class="field-value">&nbsp;</div>
-        </div>
-        <div class="col-md-6">
-          <div class="field-label">Grado Escolar:</div>
-          <div class="field-value">&nbsp;</div>
-        </div>
-      </div>
-
-      <div class="section-title">Datos de admisión</div>
-      <div class="row gy-3">
-        <div class="col-md-6">
-          <div class="field-label">Carrera de Interés:</div>
-          <div class="field-value">&nbsp;</div>
-        </div>
-        <div class="col-md-6">
-          <div class="field-label">Semestre (Admisión):</div>
-          <div class="field-value">&nbsp;</div>
-        </div>
-        <div class="col-md-6">
-          <div class="field-label">Modalidad:</div>
-          <div class="field-value">&nbsp;</div>
-        </div>
-        <div class="col-md-6">
-          <div class="field-label">Semestre (Campaña): <i class="bi bi-question-circle text-muted"></i></div>
-          <div class="field-value">2026-II</div>
-        </div>
-        <div class="col-md-6">
-          <div class="field-label">Sede:</div>
-          <div class="field-value d-flex justify-content-between">&nbsp;<i class="bi bi-caret-down-fill text-muted"></i></div>
+      <div class="stage-block data-block" id="stage-examen">
+        <div class="section-title" style="margin-top:0;">Bloque examen</div>
+        <div class="row gy-3">
+          <div class="col-md-6">
+            <label class="field-label" for="exa-1">label_1</label>
+            <input class="field-input form-control" id="exa-1" type="text" placeholder="Campo_1">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="exa-2">label_2</label>
+            <input class="field-input form-control" id="exa-2" type="text" placeholder="Campo_2">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="exa-3">label_3</label>
+            <input class="field-input form-control" id="exa-3" type="text" placeholder="Campo_3">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="exa-4">label_4</label>
+            <input class="field-input form-control" id="exa-4" type="text" placeholder="Campo_4">
+          </div>
         </div>
       </div>
-
-      <div class="section-title">Datos del lead</div>
-      <div class="row gy-3">
-        <div class="col-md-6">
-          <div class="field-label">Origen del Lead:</div>
-          <div class="field-value">Pauta Digital</div>
+      <div class="stage-block data-block d-none" id="stage-pago">
+        <div class="section-title" style="margin-top:0;">Bloque pago</div>
+        <div class="row gy-3">
+          <div class="col-md-6">
+            <label class="field-label" for="pago-1">Monto</label>
+            <input class="field-input form-control" id="pago-1" type="text" placeholder="S/ 0.00">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="pago-2">Método de pago</label>
+            <input class="field-input form-control" id="pago-2" type="text" placeholder="Efectivo / Tarjeta">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="pago-3">Fecha de pago</label>
+            <input class="field-input form-control" id="pago-3" type="text" placeholder="dd/mm/aaaa">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="pago-4">Comprobante</label>
+            <input class="field-input form-control" id="pago-4" type="text" placeholder="Nro. comprobante">
+          </div>
         </div>
-        <div class="col-md-6">
-          <div class="field-label">Campaña de Pauta Digital:</div>
-          <div class="field-value">&nbsp;</div>
+      </div>
+      <div class="stage-block data-block d-none" id="stage-status-academico">
+        <div class="section-title" style="margin-top:0;">Bloque status académico</div>
+        <div class="row gy-3">
+          <div class="col-md-6">
+            <label class="field-label" for="sa-1">Universidad</label>
+            <input class="field-input form-control" id="sa-1" type="text" placeholder="Nombre de universidad">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="sa-2">Carrera</label>
+            <input class="field-input form-control" id="sa-2" type="text" placeholder="Carrera universitaria">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="sa-3">Ciclo actual</label>
+            <input class="field-input form-control" id="sa-3" type="text" placeholder="Ej: 3er ciclo">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="sa-4">Promedio</label>
+            <input class="field-input form-control" id="sa-4" type="text" placeholder="0.00">
+          </div>
         </div>
-        <div class="col-md-6">
-          <div class="field-label">Equipo de ventas</div>
-          <div class="field-value">Comercial Pregrado</div>
+      </div>
+      <div class="stage-block data-block d-none" id="stage-status-examen">
+        <div class="section-title" style="margin-top:0;">Bloque status examen</div>
+        <div class="row gy-3">
+          <div class="col-md-6">
+            <label class="field-label" for="se-1">Tipo de examen</label>
+            <input class="field-input form-control" id="se-1" type="text" placeholder="Admisión / Parcial">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="se-2">Fecha de examen</label>
+            <input class="field-input form-control" id="se-2" type="text" placeholder="dd/mm/aaaa">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="se-3">Nota obtenida</label>
+            <input class="field-input form-control" id="se-3" type="text" placeholder="0.00">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="se-4">Resultado</label>
+            <input class="field-input form-control" id="se-4" type="text" placeholder="Aprobado / Desaprobado">
+          </div>
         </div>
-        <div class="col-md-6">
-          <div class="field-label">Responsable</div>
-          <div class="field-value">&nbsp;</div>
+      </div>
+      <div class="stage-block data-block d-none" id="stage-documentos">
+        <div class="section-title" style="margin-top:0;">Bloque documentos</div>
+        <div class="row gy-3">
+          <div class="col-md-6">
+            <label class="field-label" for="doc-1">DNI escaneado</label>
+            <input class="field-input form-control" id="doc-1" type="text" placeholder="Adjuntar DNI">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="doc-2">Certificado de estudios</label>
+            <input class="field-input form-control" id="doc-2" type="text" placeholder="Adjuntar certificado">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="doc-3">Ficha de inscripción</label>
+            <input class="field-input form-control" id="doc-3" type="text" placeholder="Adjuntar ficha">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="doc-4">Otros documentos</label>
+            <input class="field-input form-control" id="doc-4" type="text" placeholder="Adjuntar otros">
+          </div>
+        </div>
+      </div>
+      <div class="stage-block data-block d-none" id="stage-matriculado">
+        <div class="section-title" style="margin-top:0;">Bloque matriculado</div>
+        <div class="row gy-3">
+          <div class="col-md-6">
+            <label class="field-label" for="mat-1">Código de matrícula</label>
+            <input class="field-input form-control" id="mat-1" type="text" placeholder="Código">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="mat-2">Fecha de matrícula</label>
+            <input class="field-input form-control" id="mat-2" type="text" placeholder="dd/mm/aaaa">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="mat-3">Semestre matriculado</label>
+            <input class="field-input form-control" id="mat-3" type="text" placeholder="2026-II">
+          </div>
+          <div class="col-md-6">
+            <label class="field-label" for="mat-4">Sección</label>
+            <input class="field-input form-control" id="mat-4" type="text" placeholder="A / B / C">
+          </div>
         </div>
       </div>
 
