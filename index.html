@@ -19,7 +19,6 @@
 .login-card .form-control{font-size:.9rem;padding:.55rem .75rem;border:1px solid var(--border);border-radius:4px;}
 .login-card .form-control:focus{border-color:#000;box-shadow:none;}
 .login-card .btn-crm-solid{width:100%;padding:.55rem;font-size:.9rem;border-radius:4px;}
-.login-card .footer-text{font-size:.78rem;color:var(--muted);text-align:center;margin-top:1.5rem;}
 </style>
 </head>
 <body>
@@ -35,30 +34,22 @@
       <div class="card-body">
         <h2>Iniciar sesión</h2>
         <p class="sub">Ingresa tus credenciales para acceder al sistema</p>
-        <form id="loginForm">
+        <form onsubmit="window.location.href='leads.html';return false">
           <div class="mb-3">
             <label for="email">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
+            <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com">
           </div>
           <div class="mb-3">
             <label for="password">Contraseña</label>
-            <input type="password" class="form-control" id="password" placeholder="••••••••" required>
+            <input type="password" class="form-control" id="password" placeholder="••••••••">
           </div>
           <button type="submit" class="btn-crm-solid">Ingresar</button>
         </form>
-        <div class="footer-text">
-          ¿Olvidaste tu contraseña? <a href="#" style="color:#000;text-decoration:underline;">Recupérala aquí</a>
-        </div>
       </div>
     </div>
   </div>
 </div>
 
-<script>
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  window.location.href = 'leads.html';
-});
-</script>
+
 </body>
 </html>

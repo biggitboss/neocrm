@@ -1,3 +1,8 @@
+const stageNames = {
+  'examen': 'Exámen', 'pago': 'Pago', 'status-academico': 'Status Académico',
+  'status-examen': 'Status Exámen', 'documentos': 'Documentos', 'matriculado': 'Matriculado'
+};
+
 document.querySelectorAll('[data-stage]').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -8,6 +13,14 @@ document.querySelectorAll('[data-stage]').forEach(link => {
     document.querySelectorAll('.stage-ribbon').forEach(r => r.classList.add('d-none'));
     const ribbon = document.getElementById('ribbon-' + this.dataset.stage);
     if (ribbon) ribbon.classList.remove('d-none');
+
+    const now = new Date();
+    const time = now.toLocaleTimeString('es-PE', { hour: 'numeric', minute: '2-digit', hour12: true });
+    const feed = document.getElementById('chatterFeed');
+    const msg = document.createElement('div');
+    msg.className = 'chatter-msg';
+    msg.innerHTML = '<div class="avatar-badge">S</div><div><div><strong>Sistema</strong> <span class="text-muted">' + time + '</span></div><div class="text-muted">Avance a etapa: ' + stageNames[this.dataset.stage] + '</div></div>';
+    feed.insertBefore(msg, feed.firstChild);
   });
 });
 
