@@ -22,8 +22,9 @@
   .input-icon{position:relative;}
   .input-icon i{position:absolute;left:.75rem;top:50%;transform:translateY(-50%);color:#666;font-size:.85rem;}
   .input-icon .form-control-crm{padding-left:2.1rem;}
-  .input-icon.icon-right i{left:auto;right:.75rem;}
-  .input-icon.icon-right .form-control-crm{padding-left:.75rem;padding-right:2.1rem;}
+.input-icon.icon-right i{left:auto;right:.75rem;}
+.input-icon.icon-right .form-control-crm{padding-left:.75rem;padding-right:2.1rem;}
+
 
   .subcard{border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.2rem;background:#fff;height:100%;}
   .subcard-title{font-weight:700;font-size:.8rem;display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.03em;}
@@ -61,18 +62,6 @@
   </div>
 </nav>
 
-<!-- TOOLBAR -->
-<div class="toolbar justify-content-between">
-  <div class="d-flex align-items-center gap-2">
-    <button class="btn-crm">Nuevo</button>
-    <span class="breadcrumb-crm">
-      <a href="leads.html">Leads</a> / <span class="current">Propuesta de Seguimiento</span>
-    </span>
-  </div>
-  <div class="d-flex align-items-center gap-2">
-    <span class="pager">1 / 1 <i class="bi bi-chevron-left"></i> <i class="bi bi-chevron-right"></i></span>
-  </div>
-</div>
 
 <div class="row g-0">
   <!-- MAIN: contenedor del lado izquierdo -->
@@ -98,55 +87,55 @@
       <div class="row g-3">
 
         <!-- DATOS DEL INTERESADO -->
-        <div class="col-12">
+        <div class="col-md-6">
           <div class="card-crm">
             <div class="card-crm-header"><span class="icon-badge"><i class="bi bi-person-fill"></i></span> Datos del interesado</div>
             <div class="row g-3">
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group-crm">
                   <label class="form-label-crm">DNI <span class="req">*</span></label>
                   <input class="form-control-crm" placeholder="Ingresa el DNI">
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group-crm">
                   <label class="form-label-crm">Nombre <span class="req">*</span></label>
                   <input class="form-control-crm" placeholder="Ingresa el nombre completo">
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group-crm">
                   <label class="form-label-crm">Celular <span class="req">*</span></label>
                   <div class="input-icon"><i class="bi bi-telephone-fill"></i><input class="form-control-crm" placeholder="9XX XXX XXX"></div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group-crm">
                   <label class="form-label-crm">Nombre del padre/madre o tutor <span class="req">*</span></label>
                   <input class="form-control-crm" placeholder="Ingresa el nombre completo">
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group-crm">
                   <label class="form-label-crm">Celular del padre/madre o tutor <span class="req">*</span></label>
                   <div class="input-icon"><i class="bi bi-telephone-fill"></i><input class="form-control-crm" placeholder="9XX XXX XXX"></div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group-crm">
-                  <label class="form-label-crm">(Plugin) Departamento <span class="req">*</span></label>
+                  <label class="form-label-crm">Departamento <span class="req">*</span></label>
                   <select class="form-control-crm"><option>Selecciona un departamento</option><option>Lima</option><option>Callao</option><option>Arequipa</option><option>Cusco</option><option>La Libertad</option><option>Piura</option><option>Junín</option><option>Lambayeque</option></select>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group-crm">
-                  <label class="form-label-crm">(Plugin) Distrito <span class="req">*</span></label>
+                  <label class="form-label-crm">Distrito <span class="req">*</span></label>
                   <select class="form-control-crm"><option>Selecciona un distrito</option><option>Miraflores</option><option>San Isidro</option><option>Barranco</option><option>Santiago de Surco</option><option>La Molina</option><option>San Borja</option><option>Los Olivos</option><option>Comas</option></select>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group-crm">
-                  <label class="form-label-crm">(Plugin) Colegio 5to Sec <span class="req">*</span></label>
+                  <label class="form-label-crm">Colegio 5to Sec <span class="req">*</span></label>
                   <select class="form-control-crm"><option>Selecciona un colegio</option><option>Colegio San Agustín</option><option>Colegio Santa María</option><option>Colegio La Salle</option><option>Colegio Sagrados Corazones</option><option>Colegio San Ignacio de Loyola</option><option>Colegio TRILCE</option><option>Colegio Saco Oliveros</option></select>
                 </div>
               </div>
@@ -154,30 +143,30 @@
           </div>
         </div>
 
-        <!-- DATOS DE ADMISIÓN -->
-        <div class="col-12">
+        <!-- COLUMNA DERECHA (DATOS DE ADMISIÓN + DATOS DEL LEAD) -->
+        <div class="col-md-6 d-flex flex-column gap-3">
           <div class="card-crm">
             <div class="card-crm-header"><span class="icon-badge"><i class="bi bi-mortarboard-fill"></i></span> Datos de admisión</div>
             <div class="row g-3">
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group-crm">
                   <label class="form-label-crm">Carrera de interés <span class="req">*</span></label>
                   <select class="form-control-crm"><option>Selecciona una carrera</option><option>Ingeniería de Sistemas</option><option>Ingeniería Civil</option><option>Administración de Empresas</option><option>Medicina Humana</option><option>Derecho</option><option>Psicología</option><option>Arquitectura</option><option>Contabilidad</option></select>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group-crm">
                   <label class="form-label-crm">Modalidad <span class="req">*</span></label>
                   <select class="form-control-crm"><option>Selecciona una modalidad</option><option>Presencial</option><option>Semipresencial</option><option>Virtual</option></select>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group-crm">
                   <label class="form-label-crm">Sede <span class="req">*</span></label>
                   <select class="form-control-crm"><option>Selecciona una sede</option><option>Lima Centro</option><option>Lima Norte</option><option>Lima Sur</option><option>Arequipa</option><option>Cusco</option><option>Trujillo</option></select>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group-crm">
                   <label class="form-label-crm">Semestre <span class="req">*</span></label>
                   <select class="form-control-crm"><option>Selecciona un semestre</option><option>2026-I</option><option>2026-II</option><option>2027-I</option><option>2027-II</option></select>
@@ -185,10 +174,7 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- DATOS DEL LEAD -->
-        <div class="col-12">
           <div class="card-crm">
             <div class="card-crm-header"><span class="icon-badge"><i class="bi bi-file-earmark-text-fill"></i></span> Datos del lead</div>
             <div class="row g-3">
