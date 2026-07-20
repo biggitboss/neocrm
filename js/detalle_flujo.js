@@ -1,6 +1,6 @@
 const stageNames = {
-  'examen': 'Exámen', 'pago': 'Pago', 'status-academico': 'Status Académico',
-  'status-examen': 'Status Exámen', 'documentos': 'Documentos', 'matriculado': 'Matriculado'
+  'examen': 'Examen', 'pago': 'Pago', 'status': 'Status',
+  'documentos': 'Documentos', 'matricula': 'Matrícula'
 };
 
 document.querySelectorAll('[data-stage]').forEach(link => {
