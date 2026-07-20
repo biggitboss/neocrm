@@ -1,0 +1,25 @@
+LEAD
+1.	Datos del interesado:
+    •	Nombres (Campo de Texto)
+    •	Apellidos (Campo de Texto)
+    •	Celular (Campo de Texto)
+    •	DNI (Campo de Texto)
+    •	Correo (Campo de Texto)
+    •	Colegio de Procedencia (Dropdown: 3 Nombres de colegios)
+    •	Campos del Apoderado (Dropdown: Padre, Madre, Tutor)
+    •	Nombre y Apellidos del Apoderado (Campo de Texto)
+    •	Celular del Apoderado (Campo de texto)
+2.	Datos de admisión
+    •	Carrera de interés (Dropdown: Comunicaciones, Turismo, Psicología)
+    •	Modalidad (Dropdown: Traslado interno, Tercio Superior, Primera alternativa, Deportista calificado, etc)
+    •	Sede (Dropdown: Comas, Santa Anita, Surquillo)
+    •	Semestre de campaña (Dropdown: 2026-I, 2026-II)
+    •	Semestre de admisión (Dropdown: 2026-I, 2026-II)
+3.	Datos de Lead
+    •	Campaña (Dropdown: Admisión Regular, Exámen Digital)
+    •	Evento (Dropdown: Open Day 1, Open Day 2, Open Day 3)
+    •	Origen (Dropdown: Pauta Digital, Central, evento Presencial, Counter, Visita a colegios)
+    •	Fecha de registro (DatePicker de fecha)
+    •	Contacto I (Dropdown: Evaluando opciones, Mostró intéres, incontactable, No contesta, Se envió información, Escogió otra universidad)
+    •	Contacto II (Dropdown: Evaluando opciones, Mostró intéres, incontactable, No contesta, Se envió información, Escogió otra universidad)
+    •	Contacto III (Dropdown: Evaluando opciones, Mostró intéres, incontactable, No contesta, Se envió información, Escogió otra universidad)
