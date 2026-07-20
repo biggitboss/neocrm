@@ -1,0 +1,109 @@
+/* ===== seguimiento.html ===== */
+
+/* ---- Layout ---- */
+.page-wrap{width:100%;}
+
+
+/* ---- Stat cards ---- */
+.stats-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:.85rem;margin-bottom:1.5rem;padding:1rem 1.5rem 0;}
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem;display:flex;align-items:center;gap:.9rem;}
+.stat-icon{width:44px;height:44px;border-radius:10px;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex:none;}
+.stat-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);margin-bottom:.1rem;}
+.stat-value{font-size:1.6rem;font-weight:700;line-height:1.1;color:var(--text);}
+.stat-sub{font-size:.76rem;color:var(--muted);margin-top:.15rem;}
+.stat-sub strong{color:var(--text);}
+
+/* ---- Board layout ---- */
+.board-layout{display:flex;gap:1.25rem;align-items:flex-start;padding:0 1.5rem 1.5rem;}
+.board-panel{flex:1;min-width:0;}
+.board-layout > div:last-child{width:300px;flex:none;}
+
+/* ---- Tabs ---- */
+.seg-tabs{display:flex;gap:.25rem;margin-bottom:1rem;border-bottom:1px solid var(--border);padding-bottom:0;}
+.seg-tab{font-size:.82rem;padding:.45rem 1rem;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}
+.seg-tab:hover{color:var(--text);}
+.seg-tab.active{color:#000;font-weight:600;border-bottom-color:#000;}
+
+/* ---- Filter row ---- */
+.filter-row{display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;flex-wrap:wrap;}
+.filter-select{border:1px solid var(--border);border-radius:4px;padding:.35rem .7rem;font-size:.82rem;color:var(--text);background:#fff;display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;}
+.filter-select i{font-size:.72rem;color:var(--muted);}
+.filter-btn{border:1px solid var(--border);background:#fff;border-radius:4px;padding:.35rem .7rem;font-size:.82rem;color:var(--text);}
+.filter-btn:hover{background:var(--surface);}
+
+/* ---- Table ---- */
+.table-seg{width:100%;border-collapse:collapse;font-size:.82rem;}
+.table-seg thead th{background:var(--surface);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600;padding:.6rem .65rem;border-bottom:1px solid var(--border);white-space:nowrap;}
+.table-seg thead th i{font-size:.7rem;margin-left:.25rem;color:var(--muted);}
+.table-seg tbody td{padding:.6rem .65rem;border-bottom:1px solid var(--border);vertical-align:middle;}
+.table-seg tbody tr:hover{background:var(--surface);}
+.table-seg input[type="checkbox"]{accent-color:#000;width:15px;height:15px;}
+
+.lead-cell{display:flex;align-items:center;gap:.5rem;}
+.lead-avatar{width:30px;height:30px;border-radius:50%;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;flex:none;}
+.lead-name{font-weight:600;color:var(--text);}
+.lead-sub{font-size:.74rem;color:var(--muted);}
+
+.type-cell{display:flex;align-items:center;gap:.4rem;}
+.type-icon{width:26px;height:26px;border-radius:6px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:.75rem;color:var(--text);flex:none;}
+
+.activity-title{font-weight:500;color:var(--text);}
+.activity-sub{font-size:.74rem;color:var(--muted);}
+
+.contact-date{font-weight:600;color:var(--text);}
+.contact-time{font-size:.74rem;color:var(--muted);}
+
+/* ---- Badges ---- */
+.badge-seg{display:inline-block;font-size:.72rem;font-weight:600;padding:.2rem .65rem;border-radius:10px;}
+.badge-pendiente{background:#fef3cd;color:#856404;}
+.badge-agendado{background:#d1ecf1;color:#0c5460;}
+.badge-admitido{background:#d4edda;color:#155724;}
+
+/* ---- Tags (vencido / hoy) ---- */
+.tag-time{display:inline-block;font-size:.68rem;font-weight:600;padding:.1rem .5rem;border-radius:3px;background:#f0f0f0;color:var(--muted);margin-top:.25rem;}
+.tag-time.vencido{background:#fde8e8;color:#b91c1c;}
+.tag-time.hoy{background:#def7e5;color:#0b6e2e;}
+
+/* ---- Action icons ---- */
+.action-icons{display:flex;gap:.5rem;font-size:1rem;color:var(--muted);}
+.action-icons i{cursor:pointer;}
+.action-icons i:hover{color:var(--text);}
+
+/* ---- Table footer + pagination ---- */
+.table-footer{display:flex;justify-content:space-between;align-items:center;padding:.7rem 0;font-size:.82rem;color:var(--muted);}
+.pagination-seg{display:flex;gap:.2rem;}
+.page-btn{width:30px;height:30px;border-radius:4px;border:1px solid var(--border);background:#fff;display:flex;align-items:center;justify-content:center;font-size:.8rem;cursor:pointer;color:var(--text);}
+.page-btn:hover{background:var(--surface);}
+.page-btn.active{background:#000;color:#fff;border-color:#000;}
+
+/* ---- Sidebar cards ---- */
+.side-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1rem;margin-bottom:1rem;}
+.side-card:last-child{margin-bottom:0;}
+
+/* ---- Mini calendar ---- */
+.cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.7rem;}
+.cal-title{font-weight:600;font-size:.85rem;}
+.cal-header i{cursor:pointer;color:var(--muted);font-size:.8rem;}
+.cal-header i:hover{color:var(--text);}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center;}
+.cal-dow{font-size:.68rem;text-transform:uppercase;color:var(--muted);padding:.3rem 0;font-weight:600;}
+.cal-day{font-size:.78rem;padding:.35rem 0;border-radius:4px;cursor:pointer;color:var(--text);}
+.cal-day:hover{background:var(--surface);}
+.cal-day.muted{color:#ccc;}
+.cal-day.selected{background:#000;color:#fff;font-weight:600;}
+
+/* ---- Agenda ---- */
+.agenda-title{font-weight:600;font-size:.85rem;display:flex;align-items:center;justify-content:space-between;margin-bottom:.7rem;}
+.agenda-count{background:var(--surface);border-radius:10px;padding:.1rem .55rem;font-size:.75rem;color:var(--muted);}
+.agenda-item{padding:.6rem 0;border-bottom:1px solid #f0f0f0;}
+.agenda-item:last-child{border-bottom:none;}
+.agenda-time{font-weight:600;font-size:.8rem;color:var(--text);display:flex;align-items:center;gap:.5rem;margin-bottom:.2rem;}
+.agenda-status{font-size:.68rem;font-weight:600;padding:.08rem .45rem;border-radius:3px;background:#f0f0f0;color:var(--muted);}
+.agenda-status.hoy{background:#def7e5;color:#0b6e2e;}
+.agenda-desc{font-size:.82rem;color:var(--text);margin-bottom:.2rem;}
+.agenda-meta{font-size:.74rem;color:var(--muted);display:flex;gap:1rem;flex-wrap:wrap;}
+.agenda-meta i{margin-right:.3rem;}
+
+/* ---- Button outline ---- */
+.btn-outline-crm{width:100%;border:1px solid var(--border);background:#fff;border-radius:6px;padding:.5rem;font-size:.82rem;color:var(--text);margin-top:.6rem;}
+.btn-outline-crm:hover{background:var(--surface);}

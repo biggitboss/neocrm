@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Seguimiento - CRM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/seguimiento.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar-crm d-flex align-items-center justify-content-between">
+  <div class="d-flex align-items-center">
+    <span class="brand me-4"><i class="bi bi-grid-3x3-gap-fill"></i> CRM</span>
+    <a class="nav-link d-inline-block active" href="flujo.html">Mi Flujo</a>
+    <a class="nav-link d-inline-block" href="leads.html">Leads</a>
+    <a class="nav-link d-inline-block" href="#">Reportes</a>
+    <a class="nav-link d-inline-block" href="#">Configuración</a>
+  </div>
+  <div class="dropdown">
+    <a class="avatar-circle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" role="button">A</a>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Mi perfil</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+
+
+  <!-- STAT CARDS -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+      <div>
+        <div class="stat-label">Asignados</div>
+        <div class="stat-value">1086</div>
+        <div class="stat-sub">Asignados hoy: <strong>20</strong></div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="bi bi-telephone-fill"></i></div>
+      <div>
+        <div class="stat-label">Contactados hoy</div>
+        <div class="stat-value">45</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="bi bi-calendar2-check-fill"></i></div>
+      <div>
+        <div class="stat-label">Agendados</div>
+        <div class="stat-value">32</div>
+        <div class="stat-sub">Examen Digital</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="bi bi-mortarboard-fill"></i></div>
+      <div>
+        <div class="stat-label">Admitidos</div>
+        <div class="stat-value">18</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="bi bi-calendar-check"></i></div>
+      <div>
+        <div class="stat-label">Evento confirmado</div>
+        <div class="stat-value">27</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOARD LAYOUT: table + sidebar -->
+  <div class="board-layout">
+
+    <!-- LEFT: TABLE PANEL -->
+    <div class="board-panel">
+
+      <!-- TABS -->
+      <div class="seg-tabs">
+        <span class="seg-tab active">Todos</span>
+        <span class="seg-tab">Pendiente</span>
+        <span class="seg-tab">Agendado</span>
+        <span class="seg-tab">Admitidos</span>
+        <span class="seg-tab">Perdidos</span>
+      </div>
+
+      <!-- FILTERS -->
+      <div class="filter-row">
+        <span class="filter-select"><i class="bi bi-calendar3"></i> 06/06/2024 - 06/06/2024 <i class="bi bi-caret-down-fill"></i></span>
+        <span class="filter-select">Todos los asesores <i class="bi bi-caret-down-fill"></i></span>
+        <button class="filter-btn"><i class="bi bi-funnel"></i> Filtros</button>
+      </div>
+
+      <!-- TABLE -->
+      <div class="table-responsive">
+      <table class="table-seg">
+        <thead>
+          <tr>
+            <th style="width:32px;"><input type="checkbox"></th>
+            <th>Próximo contacto <i class="bi bi-arrow-down-up"></i></th>
+            <th>Lead</th>
+            <th>Tipo / Evento</th>
+            <th>Actividad</th>
+            <th>Estatus</th>
+            <th>Asesor</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>
+              <div class="contact-date">06/06/2024</div>
+              <div class="contact-time">10:00 AM</div>
+              <span class="tag-time vencido">Vencido</span>
+            </td>
+            <td>
+              <div class="lead-cell">
+                <div class="lead-avatar">JC</div>
+                <div>
+                  <div class="lead-name">José Carlos López</div>
+                  <div class="lead-sub">DNI: 76451238</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="type-cell">
+                <div class="type-icon"><i class="bi bi-calendar-event"></i></div>
+                <span>Open Day 1</span>
+              </div>
+            </td>
+            <td>
+              <div class="activity-title">Confirmar asistencia</div>
+              <div class="activity-sub">Evento programado</div>
+            </td>
+            <td><span class="badge-seg badge-pendiente">Pendiente</span></td>
+            <td>Ana Salazar</td>
+            <td>
+              <div class="action-icons">
+                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-telephone"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>
+              <div class="contact-date">06/06/2024</div>
+              <div class="contact-time">11:30 AM</div>
+              <span class="tag-time hoy">Hoy</span>
+            </td>
+            <td>
+              <div class="lead-cell">
+                <div class="lead-avatar">ML</div>
+                <div>
+                  <div class="lead-name">María Fernanda Lima</div>
+                  <div class="lead-sub">DNI: 75896321</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="type-cell">
+                <div class="type-icon"><i class="bi bi-calendar-event"></i></div>
+                <span>Taller Vivencial 2</span>
+              </div>
+            </td>
+            <td>
+              <div class="activity-title">Recordatorio de evento</div>
+              <div class="activity-sub">Confirmación pendiente</div>
+            </td>
+            <td><span class="badge-seg badge-pendiente">Pendiente</span></td>
+            <td>Ana Salazar</td>
+            <td>
+              <div class="action-icons">
+                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-telephone"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>
+              <div class="contact-date">06/06/2024</div>
+              <div class="contact-time">2:00 PM</div>
+              <span class="tag-time hoy">Hoy</span>
+            </td>
+            <td>
+              <div class="lead-cell">
+                <div class="lead-avatar">BA</div>
+                <div>
+                  <div class="lead-name">Bruno Andretti</div>
+                  <div class="lead-sub">DNI: 77321455</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="type-cell">
+                <div class="type-icon"><i class="bi bi-calendar-event"></i></div>
+                <span>Open Day 2</span>
+              </div>
+            </td>
+            <td>
+              <div class="activity-title">Llamada de seguimiento</div>
+              <div class="activity-sub">Interesado en Psicología</div>
+            </td>
+            <td><span class="badge-seg badge-pendiente">Pendiente</span></td>
+            <td>Ana Salazar</td>
+            <td>
+              <div class="action-icons">
+                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-telephone"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>
+              <div class="contact-date">07/06/2024</div>
+              <div class="contact-time">9:00 AM</div>
+              <span class="tag-time">Mañana</span>
+            </td>
+            <td>
+              <div class="lead-cell">
+                <div class="lead-avatar">VA</div>
+                <div>
+                  <div class="lead-name">Valeria Aquino</div>
+                  <div class="lead-sub">DNI: 76851247</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="type-cell">
+                <div class="type-icon"><i class="bi bi-calendar-event"></i></div>
+                <span>Taller Vivencial 1</span>
+              </div>
+            </td>
+            <td>
+              <div class="activity-title">Confirmar asistencia</div>
+              <div class="activity-sub">Verificar datos</div>
+            </td>
+            <td><span class="badge-seg badge-agendado">Agendado</span></td>
+            <td>Ana Salazar</td>
+            <td>
+              <div class="action-icons">
+                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-telephone"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>
+              <div class="contact-date">07/06/2024</div>
+              <div class="contact-time">11:00 AM</div>
+              <span class="tag-time">Mañana</span>
+            </td>
+            <td>
+              <div class="lead-cell">
+                <div class="lead-avatar">LR</div>
+                <div>
+                  <div class="lead-name">Luis Ramos</div>
+                  <div class="lead-sub">DNI: 70125478</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="type-cell">
+                <div class="type-icon"><i class="bi bi-calendar-event"></i></div>
+                <span>Open Day 3</span>
+              </div>
+            </td>
+            <td>
+              <div class="activity-title">Información de carrera</div>
+              <div class="activity-sub">Psicología</div>
+            </td>
+            <td><span class="badge-seg badge-agendado">Agendado</span></td>
+            <td>Ana Salazar</td>
+            <td>
+              <div class="action-icons">
+                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-telephone"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>
+              <div class="contact-date">07/06/2024</div>
+              <div class="contact-time">3:00 PM</div>
+              <span class="tag-time">Mañana</span>
+            </td>
+            <td>
+              <div class="lead-cell">
+                <div class="lead-avatar">SC</div>
+                <div>
+                  <div class="lead-name">Sofía Camacho</div>
+                  <div class="lead-sub">DNI: 75489632</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="type-cell">
+                <div class="type-icon"><i class="bi bi-star"></i></div>
+                <span>Visitas Guiadas</span>
+              </div>
+            </td>
+            <td>
+              <div class="activity-title">Enviar información</div>
+              <div class="activity-sub">Por WhatsApp</div>
+            </td>
+            <td><span class="badge-seg badge-admitido">Admitido</span></td>
+            <td>Ana Salazar</td>
+            <td>
+              <div class="action-icons">
+                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-telephone"></i>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <!-- FOOTER: results + pagination -->
+      <div class="table-footer">
+        <span>Mostrando 1 a 6 de 24 resultados</span>
+        <div class="pagination-seg">
+          <span class="page-btn"><i class="bi bi-chevron-left"></i></span>
+          <span class="page-btn active">1</span>
+          <span class="page-btn">2</span>
+          <span class="page-btn">3</span>
+          <span class="page-btn">4</span>
+          <span class="page-btn"><i class="bi bi-chevron-right"></i></span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: SIDEBAR -->
+    <div>
+
+      <!-- MINI CALENDAR -->
+      <div class="side-card">
+        <div class="cal-header">
+          <i class="bi bi-chevron-left"></i>
+          <span class="cal-title">Junio 2024</span>
+          <i class="bi bi-chevron-right"></i>
+        </div>
+        <div class="cal-grid">
+          <div class="cal-dow">Lun</div><div class="cal-dow">Mar</div><div class="cal-dow">Mié</div>
+          <div class="cal-dow">Jue</div><div class="cal-dow">Vie</div><div class="cal-dow">Sáb</div><div class="cal-dow">Dom</div>
+
+          <div class="cal-day muted">27</div><div class="cal-day muted">28</div><div class="cal-day muted">29</div>
+          <div class="cal-day muted">30</div><div class="cal-day muted">31</div><div class="cal-day">1</div><div class="cal-day">2</div>
+
+          <div class="cal-day">3</div><div class="cal-day">4</div><div class="cal-day">5</div>
+          <div class="cal-day selected">6</div><div class="cal-day">7</div><div class="cal-day">8</div><div class="cal-day">9</div>
+
+          <div class="cal-day">10</div><div class="cal-day">11</div><div class="cal-day">12</div>
+          <div class="cal-day">13</div><div class="cal-day">14</div><div class="cal-day">15</div><div class="cal-day">16</div>
+
+          <div class="cal-day">17</div><div class="cal-day">18</div><div class="cal-day">19</div>
+          <div class="cal-day">20</div><div class="cal-day">21</div><div class="cal-day">22</div><div class="cal-day">23</div>
+
+          <div class="cal-day">24</div><div class="cal-day">25</div><div class="cal-day">26</div>
+          <div class="cal-day">27</div><div class="cal-day">28</div><div class="cal-day">29</div><div class="cal-day">30</div>
+        </div>
+      </div>
+
+      <!-- AGENDA -->
+      <div class="side-card">
+        <div class="agenda-title">Agenda de hoy <span class="agenda-count">12</span></div>
+
+        <div class="agenda-item">
+          <div class="agenda-time">10:00 AM <span class="agenda-status">Vencido</span></div>
+          <div class="agenda-desc">Confirmar asistencia</div>
+          <div class="agenda-meta">
+            <span><i class="bi bi-person"></i> José Carlos López</span>
+            <span><i class="bi bi-calendar-event"></i> Open Day 1</span>
+          </div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-time">11:30 AM <span class="agenda-status hoy">Hoy</span></div>
+          <div class="agenda-desc">Recordatorio de evento</div>
+          <div class="agenda-meta">
+            <span><i class="bi bi-person"></i> María Fernanda Lima</span>
+            <span><i class="bi bi-calendar-event"></i> Taller Vivencial 2</span>
+          </div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-time">2:00 PM <span class="agenda-status hoy">Hoy</span></div>
+          <div class="agenda-desc">Llamada de seguimiento</div>
+          <div class="agenda-meta">
+            <span><i class="bi bi-person"></i> Bruno Andretti</span>
+            <span><i class="bi bi-calendar-event"></i> Open Day 2</span>
+          </div>
+        </div>
+
+        <button class="btn-outline-crm">Ver agenda completa</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/seguimiento.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

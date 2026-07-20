@@ -13,7 +13,7 @@
   .card-crm{border:1px solid var(--border);border-radius:8px;padding:1.25rem;background:#fff;height:100%;}
   .card-crm-header{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:.9rem;margin-bottom:1.15rem;text-transform:uppercase;letter-spacing:.03em;}
   .icon-badge{width:34px;height:34px;border-radius:8px;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;flex:none;}
-  .form-group-crm{margin-bottom:1rem;}
+  .form-group-crm{margin-bottom:.6rem;}
   .form-label-crm{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:#333;margin-bottom:.32rem;display:block;}
   .form-label-crm .req{color:#000;}
   .form-control-crm{width:100%;background:#fff;border:1px solid var(--border);border-radius:6px;padding:.55rem .75rem;font-size:.85rem;color:#333;}
@@ -36,7 +36,7 @@
   .toggle-btn.active{background:#000;color:#fff;}
   .toggle-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:.9rem;}
   .toggle-row:last-child{margin-bottom:0;}
-  .toggle-row .form-label-crm{margin-bottom:0;}
+  .toggle-row .form-label-crm{margin-bottom:0;display:inline;width:auto;}
 
   .char-count{font-size:.72rem;color:var(--muted);text-align:right;margin-top:.3rem;}
 </style>
@@ -71,26 +71,19 @@
     <div class="toolbar">
       <button class="status-btn solid">Ganado</button>
       <button class="status-btn">Perdido</button>
-      <ul class="nav stage-tabs ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Exámen</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Pago</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Status Académico</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Status Exámen</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Documentos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Matriculado</a></li>
-      </ul>
+
     </div>
 
     <div class="p-4">
 
       <!-- fila de 3 tarjetas -->
-      <div class="row g-3">
+      <div class="row g-2">
 
         <!-- DATOS DEL INTERESADO -->
         <div class="col-md-6">
           <div class="card-crm">
             <div class="card-crm-header"><span class="icon-badge"><i class="bi bi-person-fill"></i></span> Datos del interesado</div>
-            <div class="row g-3">
+            <div class="row g-2">
               <div class="col-12">
                 <div class="form-group-crm">
                   <label class="form-label-crm">DNI <span class="req">*</span></label>
@@ -147,7 +140,7 @@
         <div class="col-md-6 d-flex flex-column gap-3">
           <div class="card-crm">
             <div class="card-crm-header"><span class="icon-badge"><i class="bi bi-mortarboard-fill"></i></span> Datos de admisión</div>
-            <div class="row g-3">
+            <div class="row g-2">
               <div class="col-12">
                 <div class="form-group-crm">
                   <label class="form-label-crm">Carrera de interés <span class="req">*</span></label>
@@ -177,7 +170,7 @@
 
           <div class="card-crm">
             <div class="card-crm-header"><span class="icon-badge"><i class="bi bi-file-earmark-text-fill"></i></span> Datos del lead</div>
-            <div class="row g-3">
+            <div class="row g-2">
               <div class="col-md-6">
                 <div class="form-group-crm">
                   <label class="form-label-crm">Fecha de ingreso de lead</label>
@@ -206,40 +199,72 @@
         <i class="bi bi-calendar-check me-1"></i> Seguimiento
       </div>
 
-      <div class="row g-3">
+      <div class="row g-2">
 
         <!-- Grupo 1: Contactos -->
-        <div class="col-md-6">
+        <div class="col-12">
           <div class="subcard">
             <div class="subcard-title"><i class="bi bi-telephone"></i> Contactos de seguimiento</div>
-            <div class="form-group-crm">
-              <label class="form-label-crm">Contacto I</label>
-              <div class="input-icon icon-right"><input class="form-control-crm" type="date"><i class="bi bi-calendar3"></i></div>
-            </div>
-            <div class="form-group-crm">
-              <label class="form-label-crm">Contacto II</label>
-              <div class="input-icon icon-right"><input class="form-control-crm" type="date"><i class="bi bi-calendar3"></i></div>
-            </div>
-            <div class="form-group-crm mb-0">
-              <label class="form-label-crm">Contacto III</label>
-              <div class="input-icon icon-right"><input class="form-control-crm" type="date"><i class="bi bi-calendar3"></i></div>
+            <div class="row g-2">
+              <div class="col-md-4">
+                <label class="form-label-crm">Contacto I</label>
+                <select class="form-control-crm">
+                  <option>Seleccione estado</option>
+                  <option>Evaluando opciones</option>
+                  <option>Mostró interés</option>
+                  <option>Incontactable</option>
+                  <option>No contesta</option>
+                  <option>Se envió información</option>
+                  <option>Escogió otra universidad</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label-crm">Contacto II</label>
+                <select class="form-control-crm">
+                  <option>Seleccione estado</option>
+                  <option>Evaluando opciones</option>
+                  <option>Mostró interés</option>
+                  <option>Incontactable</option>
+                  <option>No contesta</option>
+                  <option>Se envió información</option>
+                  <option>Escogió otra universidad</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label-crm">Contacto III</label>
+                <select class="form-control-crm">
+                  <option>Seleccione estado</option>
+                  <option>Evaluando opciones</option>
+                  <option>Mostró interés</option>
+                  <option>Incontactable</option>
+                  <option>No contesta</option>
+                  <option>Se envió información</option>
+                  <option>Escogió otra universidad</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Grupo 2: Evento -->
-        <div class="col-md-6">
+        <div class="col-12">
           <div class="subcard">
             <div class="subcard-title"><i class="bi bi-calendar-event"></i> Evento</div>
-            <div class="form-group-crm">
-              <label class="form-label-crm">Evento</label>
-               <select class="form-control-crm"><option>Selecciona un evento</option><option>Charla informativa</option><option>Taller vocacional</option><option>Open House</option><option>Simulacro de examen</option><option>Feria de carreras</option></select>
-            </div>
-            <div class="toggle-row mb-0">
-              <label class="form-label-crm">Confirmación evento</label>
-              <div class="toggle-group">
-                <button class="toggle-btn active">Sí</button>
-                <button class="toggle-btn">No</button>
+            <div class="row g-2 align-items-end">
+              <div class="col-md-6">
+                <div class="form-group-crm mb-0">
+                  <label class="form-label-crm">Evento</label>
+                  <select class="form-control-crm"><option>Selecciona un evento</option><option>Charla informativa</option><option>Taller vocacional</option><option>Open House</option><option>Simulacro de examen</option><option>Feria de carreras</option></select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="toggle-row mb-0" style="justify-content:flex-end;gap:.6rem;">
+                  <label class="form-label-crm">Confirmación evento</label>
+                  <div class="toggle-group">
+                    <button class="toggle-btn active">Sí</button>
+                    <button class="toggle-btn">No</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
