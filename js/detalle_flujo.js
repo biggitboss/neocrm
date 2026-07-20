@@ -19,7 +19,8 @@ document.querySelectorAll('[data-stage]').forEach(link => {
     const feed = document.getElementById('chatterFeed');
     const msg = document.createElement('div');
     msg.className = 'chatter-msg';
-    msg.innerHTML = '<div class="avatar-badge">S</div><div><div><strong>Sistema</strong> <span class="text-muted">' + time + '</span></div><div class="text-muted">Avance a etapa: ' + stageNames[this.dataset.stage] + '</div></div>';
+    const stage = this.dataset.stage;
+    msg.innerHTML = '<div class="avatar-badge">S</div><div><div><strong>Sistema</strong> <span class="text-muted">' + time + '</span></div><div class="text-muted">Avance a etapa: ' + stageNames[stage] + '</div>' + (stage === 'matricula' ? '<div class="mt-2"><img src="images/mailing.png" style="max-width:100%;border-radius:6px;"></div>' : '') + '</div>';
     feed.insertBefore(msg, feed.firstChild);
   });
 });
